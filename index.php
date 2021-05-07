@@ -13,10 +13,10 @@ $result = mysqli_query($conn, $sql);
 $locations = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 //free result from memory
-// mysqli_free_result($result);
+mysqli_free_result($result);
 
 //close connection
-// mysqli_close($conn);
+mysqli_close($conn);
 
 //print array 
 // print_r($locations);
@@ -39,6 +39,7 @@ $locations = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <?php foreach ($locations as $location) {  ?>
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
+                    <img src="img/photo6.svg" class="vacay">
                         <div class="class-content center">
                             <h6><?php echo htmlspecialchars($location['destination']); ?></h6>
                             <div><?php echo htmlspecialchars($location['details']); ?></div>
