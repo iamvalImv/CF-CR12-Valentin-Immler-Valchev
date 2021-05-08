@@ -63,7 +63,7 @@ $parsing = json_decode($result);
         <marquee width="100%" direction="left" height="100px">
             <?php echo $parsing->joke; ?>
         </marquee>
-        </p>
+        <li><a  class="btn brand z-depth-0" onclick="window.location.reload();">Load Joke</a></li>
     </div>
     <nav class="white z-depth-0">
         <div class="container">
