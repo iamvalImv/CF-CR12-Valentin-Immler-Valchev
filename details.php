@@ -54,7 +54,8 @@ if (isset($_GET['id'])) {
         <p><?php echo date($location['created_at']); ?></p>
         <h5>Details:</h5>
         <p><?php echo htmlspecialchars($location['details']); ?></p>
-
+        <!-- Google maps Location -->
+        <div id="map"></div>
 
         <!-- DELETE FORM -->
         <form action="details.php" method="POST">
@@ -70,5 +71,8 @@ if (isset($_GET['id'])) {
 <?php include('templates/footer.php'); ?>
 
 
+<script>
 
+   
+</script>
 </html>

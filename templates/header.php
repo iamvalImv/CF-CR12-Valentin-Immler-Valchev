@@ -18,7 +18,7 @@ require_once 'RESTful.php';
 $url = 'http://api.serri.codefactory.live/random/';
 $result = curl_get($url);
 $parsing = json_decode($result);
-                
+
 ?>
 
 
@@ -26,6 +26,7 @@ $parsing = json_decode($result);
     <title>Mount Everest</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script type="text/javascript" src="js/googlemaps.js"></script>
     <style type="text/css">
         .brand {
             background: #5c8a8a !important;
@@ -53,18 +54,31 @@ $parsing = json_decode($result);
         marquee {
             color: #5c8a8a;
         }
+
+        #map {
+            height: 50%;
+        }
+
+        html,
+        body {
+            height: 50%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
+
 </head>
 
 <body class="grey lighten-4">
     <!-- Serri's joking around container -->
-    <div class="col s6 md3">
+    <?
+    /* <div class="col s6 md3">
         <h3 class="text-center">Here is a joke from Serri</h3>
         <marquee width="100%" direction="left" height="100px">
             <?php echo $parsing->joke; ?>
         </marquee>
         <li><a  class="btn brand z-depth-0" onclick="window.location.reload();">Load Joke</a></li>
-    </div>
+    </div> */ ?>
     <nav class="white z-depth-0">
         <div class="container">
             <a href="index.php" class="brand-logo brand-text">Mount Everest^^</a>
