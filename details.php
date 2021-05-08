@@ -40,7 +40,9 @@ if (isset($_GET['id'])) {
 }
 
 ?>
-
+<header>
+<script type="text/javascript" src="js/googlemaps.js"></script>
+</header>
 <html>
 <!-- Include the footer of the page -->
 <?php include('templates/header.php'); ?>
@@ -54,6 +56,9 @@ if (isset($_GET['id'])) {
         <p><?php echo date($location['created_at']); ?></p>
         <h5>Details:</h5>
         <p><?php echo htmlspecialchars($location['details']); ?></p>
+        <input type="hidden" id="myLat" value="<?php echo htmlspecialchars($location['lat']); ?>">
+        <input type="hidden" id="myLong" value="<?php echo htmlspecialchars($location['lng']); ?>">
+        
         <!-- Google maps Location -->
         <div id="map"></div>
 
@@ -70,9 +75,4 @@ if (isset($_GET['id'])) {
 <!-- Include the footer of the page -->
 <?php include('templates/footer.php'); ?>
 
-
-<script>
-
-   
-</script>
 </html>
