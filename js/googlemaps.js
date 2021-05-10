@@ -8,12 +8,12 @@ function loadMap() {
     lat: myLat,
     lng: myLong
   };
-  // The map, centered at Uluru
+  // The map, centered at 
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
     center: myLocation,
   });
-  // The marker, positioned at Uluru
+  // The marker, positioned at 
   const marker = new google.maps.Marker({
     position: myLocation,
     map: map,
