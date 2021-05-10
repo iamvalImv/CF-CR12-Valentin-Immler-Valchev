@@ -53,9 +53,9 @@ if (isset($_GET['id'])) {
 
         <h4><?php echo htmlspecialchars($location['destination']); ?></h4>
         <p>Created by: <?php echo htmlspecialchars($location['email']); ?></p>
-        <p><?php echo date($location['created_at']); ?></p>
+        <p><?php echo htmlspecialchars($location['created_at']); ?></p>
         <h5>Details:</h5>
-        <p>Price: <?php echo htmlspecialchars($location['Price']); ?></p>
+        <p>Price in €: <?php echo htmlspecialchars($location['Price']); ?></p>
         <p><?php echo htmlspecialchars($location['details']); ?></p>
         <input type="hidden" id="myLat" value="<?php echo htmlspecialchars($location['lat']); ?>">
         <input type="hidden" id="myLong" value="<?php echo htmlspecialchars($location['lng']); ?>">
